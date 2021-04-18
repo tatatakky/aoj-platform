@@ -1,7 +1,6 @@
-package course.itp1
+package course.itp1.answer
 
 import cats.Id
-import course.itp1.answer.Rectangle
 import org.scalacheck.{Prop, Properties}
 
 class RectangleSpec extends Properties("Rectangle"){
