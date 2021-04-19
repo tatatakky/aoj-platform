@@ -7,8 +7,10 @@ import course.itp1.answer._
 object ITP1 {
 
   def execute: Unit = {
-    println( "Rectangle: " + rectangle )
+    println( s"Rectangle: $rectangle" )
+    println( s"XCubic: $xCubic" )
   }
 
   private def rectangle: (Int, Int) = new Rectangle[IO].program(3, 5).unsafeRunSync()
+  private def xCubic: Int           = new XCubic[IO].program(3).unsafeRunSync()
 }

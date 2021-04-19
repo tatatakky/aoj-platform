@@ -8,6 +8,6 @@ class RectangleSpec extends Properties("Rectangle"){
   property("program") = Prop.forAll {
     (a: Int, b: Int) =>
       if(rectangle.constraints(a, b)) rectangle.program(a, b) == ( a*b, 2*(a+b) )
-      else rectangle.program(a, b) == (0, 0)
+      else                            rectangle.program(a, b) == ( 0,   0)
   }
 }
