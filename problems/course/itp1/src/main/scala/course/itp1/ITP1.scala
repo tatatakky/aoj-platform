@@ -11,6 +11,6 @@ object ITP1 {
     println( s"XCubic: $xCubic" )
   }
 
-  private def rectangle: (Int, Int) = new Rectangle[IO].program(3, 5).unsafeRunSync()
-  private def xCubic: Int           = new XCubic[IO].program(3).unsafeRunSync()
+  private def rectangle: Rectangle.OutputData = new Rectangle[IO].program( Rectangle.InputData(5, 3) ).unsafeRunSync()
+  private def xCubic: XCubic.OutputData       = new XCubic[IO].program( XCubic.InputData(3) ).unsafeRunSync()
 }

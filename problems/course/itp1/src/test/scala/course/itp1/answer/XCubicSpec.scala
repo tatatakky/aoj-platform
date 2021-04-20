@@ -1,13 +1,14 @@
 package course.itp1.answer
 
 import cats.Id
+import course.itp1.answer.XCubic.{InputData, OutputData}
 import org.scalacheck.{Prop, Properties}
 
 class XCubicSpec extends Properties("XCubic") {
   val xCubic = new XCubic[Id]
   property("program") = Prop.forAll {
-    (x: Int) =>
-      if (xCubic.constraints(x)) xCubic.program(x) == x*x*x
-      else                       xCubic.program(x) == 0
+    (v: Int) =>
+      if (xCubic constraints InputData(v)) xCubic.program(InputData(v)) == OutputData( v*v*v )
+      else                                 xCubic.program(InputData(v)) == OutputData(0)
   }
 }
