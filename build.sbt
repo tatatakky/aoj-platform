@@ -6,7 +6,7 @@ lazy val baseName = "aoj-platform"
 
 lazy val `itp1` = (project in file("problems/course/itp1")).settings(
   name := s"$baseName-itp1",
-  scalaVersion := "2.13.5",
+  scalaVersion := "2.13.6",
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core" % "2.5.0",
     "org.typelevel" %% "cats-effect" % "3.0.2",
@@ -16,11 +16,11 @@ lazy val `itp1` = (project in file("problems/course/itp1")).settings(
 
 lazy val `examples` = (project in file("examples")).settings(
   name := s"$baseName-examples",
-  scalaVersion := "2.13.5"
+  scalaVersion := "2.13.6"
 ).dependsOn( `itp1` )
 
 lazy val root = (project in file("."))
   .settings(
     name := baseName,
-    scalaVersion := "2.13.5"
+    scalaVersion := "2.13.6"
   ).aggregate( `examples`, `itp1` )
