@@ -10,7 +10,7 @@ lazy val `itp1` = (project in file("problems/course/itp1")).settings(
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core" % "2.5.0",
     "org.typelevel" %% "cats-effect" % "3.0.2",
-    "org.scalacheck" %% "scalacheck" % "1.15.3" % "test"
+    "org.scalacheck" %% "scalacheck" % "1.15.4" % "test"
   )
 )
 
