@@ -8,7 +8,7 @@ lazy val `itp1` = (project in file("problems/course/itp1")).settings(
   name := s"$baseName-itp1",
   scalaVersion := "2.13.6",
   libraryDependencies ++= Seq(
-    "org.typelevel" %% "cats-core" % "2.5.0",
+    "org.typelevel" %% "cats-core" % "2.6.1",
     "org.typelevel" %% "cats-effect" % "3.0.2",
     "org.scalacheck" %% "scalacheck" % "1.15.4" % "test"
   )
